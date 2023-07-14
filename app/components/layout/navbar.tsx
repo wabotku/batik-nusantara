@@ -1,7 +1,15 @@
 // Navbar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-const Navbar: React.FC = () => {
+import logo from "/public/image/logo.png";
+import Image from "next/image";
+
+interface NavbarProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -14,29 +22,52 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-8 w-8" src="/logo.svg" alt="Logo" />
+              <Image className="h-8 w-8" src={logo} alt="Logo" />
             </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
-                to="#"
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
               </Link>
               <Link
-                to="#"
+                to="/product"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Products
               </Link>
               <Link
-                to="#"
+                to="/about"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 About
               </Link>
+              <Link
+                to="/login"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Login
+              </Link>
+              <div>
+                <button
+                  className={`bg-gray-200 dark:bg-gray-700 rounded-full p-2 focus:outline-none ${
+                    darkMode ? "translate-x-0 bg-indigo-500" : "translate-x-0"
+                  }`}
+                  onClick={toggleDarkMode}
+                  aria-label="Toggle Dark Mode"
+                >
+                  <div
+                    className={`w-4 h-4 rounded-full transform transition-transform ${
+                      darkMode
+                        ? "translate-x-0 bg-white"
+                        : "translate-x-0 bg-indigo-500"
+                    }`}
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div className="md:hidden">
@@ -65,22 +96,28 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
-                to="#"
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Home
               </Link>
               <Link
-                to="#"
+                to="/product"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Products
               </Link>
               <Link
-                to="#"
+                to="/about"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 About
+              </Link>
+              <Link
+                to="/login"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Login
               </Link>
             </div>
           </div>
