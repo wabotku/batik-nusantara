@@ -15,14 +15,11 @@ const Base: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div
-      className={`flex flex-col min-h-screen ${
-        darkMode ? "dark" : "bg-gray-100"
-      }`}
-    >
+    <div className="flex flex-col min-h-screen">
+      <div className="bg-cover bg-center bg-[url('/image/wonokromo1.png')] h-[100vh] bg-no-repeat" />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div className="flex-1">
-        <div className=" mx-auto  ">
+        <div className=" mx-auto">
           <div className="flex">
             <main
               className={`flex-1 ${
