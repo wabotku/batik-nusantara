@@ -20,7 +20,7 @@ const Base: React.FC<LayoutProps> = ({ children }) => {
       <div
         className={`bg-cover bg-center bg-no-repeat`}
         style={{
-          backgroundImage: `url('/image/wonokromo1.png')`,
+          backgroundImage: `url('/image/bg5.jpg')`,
           paddingTop: "56.25%", // 16:9 aspect ratio (height/width)
         }}
       />
