@@ -1,8 +1,10 @@
 // Navbar.tsx
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+// import { Link } from 'react-router-dom';
 import logo from "/public/image/logo.png";
 import Image from "next/image";
+import styles from "../styles";
 
 interface NavbarProps {
   darkMode: boolean;
@@ -11,6 +13,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
   const navbarRef = useRef<HTMLDivElement | null>(null); // Explicit type annotation
 
   const toggleMobileMenu = () => {
@@ -18,25 +21,42 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+    if (
+      navbarRef.current &&
+      !navbarRef.current.contains(event.target as Node)
+    ) {
       setMobileMenuOpen(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
     }
   };
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      window.addEventListener('click', handleClickOutside);
+      window.addEventListener("click", handleClickOutside);
     } else {
-      window.removeEventListener('click', handleClickOutside);
+      window.removeEventListener("click", handleClickOutside);
     }
 
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener('click', handleClickOutside);
+      window.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="navbar hover:bg-gray-800 bg-gray-100 bg-opacity-20 fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 md:translate-y-1/4" ref={navbarRef}>
+    <nav
+      className={`${scrolling ? "bg-gray-800" : ""} navbar fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 md:translate-y-1/4 transition-all duration-500`}
+      ref={navbarRef}
+    >
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -46,29 +66,17 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/"
-                className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
+              <Link href="#" className={`${styles.button.navbar}`}>
                 Home
               </Link>
-              <Link
-                to="/product"
-                className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Products
-              </Link>
-              <Link
-                to="/about"
-                className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
+              <Link href="#about" className={`${styles.button.navbar}`}>
                 About
               </Link>
-              <Link
-                to="/login"
-                className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Login
+              <Link href="#purposes" className={`${styles.button.navbar}`}>
+                Purposes
+              </Link>
+              <Link href="#product" className={`${styles.button.navbar}`}>
+                Product
               </Link>
               {/* <div>
                 <button
@@ -114,28 +122,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <Link href="#" className={`${styles.button.navbarHidden}`}>
                 Home
               </Link>
-              <Link
-                to="/product"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <Link href="#product" className={`${styles.button.navbarHidden}`}>
                 Products
               </Link>
-              <Link
-                to="/about"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <Link href="#about" className={`${styles.button.navbarHidden}`}>
                 About
               </Link>
-              <Link
-                to="/login"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <Link href="#login" className={`${styles.button.navbarHidden}`}>
                 Login
               </Link>
             </div>
