@@ -25,12 +25,15 @@ const Base: React.FC<LayoutProps> = ({ children }) => {
         }}
       />
       <div className="flex-1">
-        <div className=" mx-auto">
-          <div className="flex">
+        <div className="mx-auto">
+          <div className="flex bg-cover">
             <main
               className={`flex-1 ${
                 darkMode ? "bg-neutral-900 text-white" : "bg-white text-black"
               } p-6`}
+              style={{
+                backgroundImage: `url('/image/background-opa.png')`,
+              }}
             >
               {children}
             </main>
