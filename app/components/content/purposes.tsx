@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "/public/image/logo.png";
-import Image from "next/image";
+// import logo from "/public/image/logo.png";
+// import Image from "next/image";
 
 const Purposes: React.FC = () => {
   return (
