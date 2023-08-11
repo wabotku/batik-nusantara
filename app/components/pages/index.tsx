@@ -1,15 +1,15 @@
 import React from "react";
-import {About, Product, Purposes} from "../content";
+import {About, Advantages, Contact, Product, Purposes, Testimoni} from "../content";
 
 const Home: React.FC = () => {
   return (
-    <div className="-mb-16" style={{ height: "calc(100vh - 3rem)" }}>
+    <div className="-mb-16">
       <About />
       <Purposes />
       <Product />
-      <div>Advantages</div>
-      <div>Testimonial</div>
-      <div>Contact</div>
+      <Advantages />
+      <Testimoni />
+      <Contact />
     </div>
   );
 };

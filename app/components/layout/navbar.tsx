@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav
-      className={`${scrolling ? "bg-gray-800" : ""} navbar fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 md:translate-y-1/4 transition-all duration-500`}
+      className={`${scrolling || isMobileMenuOpen ? "bg-gray-800" : ""} navbar fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 md:translate-y-1/4 transition-all duration-500`}
       ref={navbarRef}
     >
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">

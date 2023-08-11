@@ -4,28 +4,21 @@ import Image from "next/image";
 
 const Purposes: React.FC = () => {
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center p-12"
-      id="purposes"
-    >
-      <div className="">
-        <Image className="h-41 w-41" src={logo} alt="Logo" />
-      </div>
+    <div className="grid grid-cols-1 place-items-center p-12" id="purposes">
       <div className="whitespace-break-spaces text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro excepturi
-        sapiente officiis voluptatibus quam rem, eos omnis consequatur harum, id
-        voluptatum neque aliquid ea autem obcaecati ab doloribus assumenda
-        tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Recusandae, nisi mollitia doloribus nesciunt consequuntur voluptate,
-        corporis alias delectus in incidunt sapiente dolor ut rem excepturi
-        sequi doloremque voluptatibus corrupti error! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Distinctio facilis reiciendis ipsum quidem
-        facere? Quidem at quod blanditiis quasi, similique sint nihil ea,
-        aspernatur quas a quo enim molestiae necessitatibus? Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Delectus, laborum beatae?
-        Laudantium laboriosam enim reprehenderit totam debitis porro dolorem
-        error aut provident ea hic rem, fuga, architecto officia doloribus
-        corporis.
+        Batik berasal dari kata ambatik yang artinya adalah sebuah kain yang
+        memiliki banyak titik. Akhiran dari kata batik yaitu tik artinya adalah
+        titik atau ujung yang digunakan untuk membuat sebuah titik. Kerajinan
+        dari batik di Indonesia telah dikenal sejak zaman kerajaan Majapahit.
+        Arca Bhairawa adalah salah satu contoh dari gaya seni Arca Majapahit
+        yang dibuat di daerah Sumatera pada sekitar abad ke 14. Berkembangnya
+        kesenian batik meluas di Indonesia setelah akhir abad ke 18 atau sekitar
+        awal ke 19. Kemudian batik cap dikenal setelah perang dunia I selesai
+        atau pada tahun 1920. Sejarah batik di Indonesia memiliki kaitan erat
+        dengan perkembangan Kerajaan Majapahit serta penyebaran ajaran agama
+        Islam di Pulau Jawa. menurut beberapa catatan, pengembangan dari batik
+        banyak dilakukan pada zaman Kesultanan Mataram dan kemudian berlanjut
+        pada zaman Kasunan Surakarta serta Kesultanan Yogyakarta.
       </div>
     </div>
   );

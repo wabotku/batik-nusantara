@@ -29,3 +29,27 @@ body {
 nav:hover a{
   color: white;
 }
+
+#purposes {
+  position: relative;
+}
+
+#purposes:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ffffff; /* Change this to the desired background color */
+  z-index: -1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 12px;
+  text-align: center;
+}

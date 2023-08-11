@@ -9,7 +9,7 @@ const Product: React.FC = () => {
       id="product"
     >
       <div className="">
-        <Image className="h-41 w-41" src={logo} alt="Logo" />
+        <Image className="h-40 w-36 md:h-60 md:w-56" src={logo} alt="Logo" />
       </div>
       <div className="whitespace-break-spaces text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro excepturi
