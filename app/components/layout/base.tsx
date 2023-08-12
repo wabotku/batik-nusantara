@@ -10,7 +10,7 @@ interface LayoutProps {
 
 const Base: React.FC<LayoutProps> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [langMode, setLangMode] = useState(false);
+  const [langMode, setLangMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);

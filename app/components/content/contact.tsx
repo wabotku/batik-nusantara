@@ -294,7 +294,7 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
     >
       <div className={styles.runningContent}>
         <div className="text-4xl mb-5 font-bold text-center">
-          <h1>TESTIMONI</h1>
+          <h1>{langMode ? `PELANGGAN` : `CUSTOMER`} :</h1>
         </div>
         <div className={styles.runningText}>
           <div className="flex gap-6">
@@ -315,10 +315,10 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
         <h1>{langMode ? `KONTAK KAMI` : `Contact Us`}</h1>
       </div>
       <div className="">
-        <Image className="h-40 w-40 md:h-60 md:w-60" src={logo} alt="Logo" />
+        <Image className="h-40 w-40 lg:h-60 lg:w-60" src={logo} alt="Logo" />
       </div>
-      <div className="grid grid-cols-2 gap-4 p-12" id="contact">
-        <div className="text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-12" id="contact">
+        <div className="text-center -ml-20 -mr-20 md:m-0">
           <div className="font-bold">
             <h1>{langMode ? `Alamat Showroom` : `Showroom Address`} :</h1>
           </div>
@@ -371,14 +371,14 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
           </div>
           <Link
             href="https://peken.surabaya.go.id/store/info/38"
-            className="font-bold mb-5 flex ml-24 mr-24 place-items-center hover:underline"
+            className="font-bold mb-5 flex -ml-16 md:ml-24 md:mr-24 place-items-center hover:underline"
             target="_blank"
           >
             Webstore : https://peken.surabaya.go.id/store/info/38
           </Link>
           <Link
             href="https://www.instagram.com/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex ml-32 mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
             target="_blank"
           >
             <Image className="h-10 w-10 mr-5" src={instagram} alt="Logo" />
@@ -386,7 +386,7 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
           </Link>
           <Link
             href="https://shopee.co.id/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex ml-32 mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
             target="_blank"
           >
             <Image className="h-10 w-10 mr-5" src={shopee} alt="Logo" />
@@ -394,13 +394,13 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
           </Link>
           <Link
             href="https://www.tokopedia.com/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex ml-32 mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
             target="_blank"
           >
             <Image className="h-10 w-10 mr-5" src={tokopedia} alt="Logo" />
             nadeenbybatiknusantara
           </Link>
-          <div className="font-bold mb-5 flex ml-32 mr-32 place-items-center">
+          <div className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center">
             <Image className="h-10 w-10 mr-5" src={whatsapp} alt="Logo" />
             08156653189 / 081331066535
           </div>

@@ -14,7 +14,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Services</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-justify pt-16 pl-16 pr-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 text-justify pt-16 lg:pl-16 lg:pr-16">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Production of Batik Uniform Fabric</h1>
@@ -116,7 +116,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Layanan</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-justify pt-16 pl-16 pr-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-justify pt-16 md:pl-16 md:pr-16">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Produksi Kain Seragam Batik</h1>

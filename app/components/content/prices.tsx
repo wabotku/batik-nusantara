@@ -16,7 +16,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Price for Custom Batik Patterns</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 pt-16 pl-16 pr-16">
+        <div className="grid grid-cols-1 pt-16 md:pl-16 md:pr-16">
           <div className="">
             <h1>
               The cost of creating custom batik uniforms is influenced by
@@ -24,7 +24,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             </h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 pl-16 pr-16 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 md:pl-16 md:pr-16 place-items-center">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Type of Material Used</h1>
@@ -127,7 +127,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Harga Pesan Batik Motif Sendiri</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 pt-16 pl-16 pr-16">
+        <div className="grid grid-cols-1 pt-16 md:pl-16 md:pr-16">
           <div className="">
             <h1>
               Biaya pembuatan seragam batik dipengaruhi oleh beberapa hal
@@ -135,7 +135,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             </h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 pl-16 pr-16 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 md:pl-16 md:pr-16 place-items-center">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Jenis Bahan Yang Digunakan</h1>

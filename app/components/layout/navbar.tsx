@@ -1,8 +1,9 @@
 // Navbar.tsx
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-// import { Link } from 'react-router-dom';
 import logo from "/public/image/banus-trans-white.png";
+import idn from "/public/image/Indonesia.png";
+import eng from "/public/image/english.png";
 import Image from "next/image";
 import styles from "../styles";
 import ScrollButton from "../parts/ScrollButton";
@@ -14,7 +15,12 @@ interface NavbarProps {
   toggleLangMode: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, toggleLangMode }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  darkMode,
+  toggleDarkMode,
+  langMode,
+  toggleLangMode,
+}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const navbarRef = useRef<HTMLDivElement | null>(null); // Explicit type annotation
@@ -59,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
     <nav
       className={`${
         scrolling || isMobileMenuOpen ? "bg-gray-800" : ""
-      } hover:bg-gray-800 navbar z-10 fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 md:translate-y-1/4 transition-all duration-500`}
+      } hover:bg-gray-800 navbar z-10 fixed w-[80vw] rounded-lg items-center justify-center left-1/2 transform -translate-x-1/2 translate-y-4 lg:translate-y-1/4 transition-all duration-500`}
       ref={navbarRef}
     >
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,48 +77,48 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
               </Link>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <ScrollButton
                 targetId="home"
                 offset={0}
-                label={`${langMode ? 'Beranda':'Home'}`}
+                label={`${langMode ? "Beranda" : "Home"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="about"
                 offset={-105}
-                label={`${langMode ? 'Tentang':'About'}`}
+                label={`${langMode ? "Tentang" : "About"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="purposes"
                 offset={-105}
-                label={`${langMode ? 'Tujuan':'Purposes'}`}
+                label={`${langMode ? "Tujuan" : "Purposes"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="product"
                 offset={-105}
-                label={`${langMode ? 'Produk':'Product'}`}
+                label={`${langMode ? "Produk" : "Product"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="services"
                 offset={-50}
-                label={`${langMode ? 'Layanan':'Services'}`}
+                label={`${langMode ? "Layanan" : "Services"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="prices"
                 offset={-50}
-                label={`${langMode ? 'Harga':'Prices'}`}
+                label={`${langMode ? "Harga" : "Prices"}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="contact"
                 offset={-50}
-                label={`${langMode ? 'Kontak Kami':'Contact Us'}`}
+                label={`${langMode ? "Kontak Kami" : "Contact Us"}`}
                 className={`${styles.button.navbar}`}
               />
               {/* <div>
@@ -132,9 +138,10 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
                   />
                 </button>
               </div> */}
-              <div>
+              <div className="flex">
+                <Image className="h-6 w-6" src={idn} alt="Logo" />
                 <button
-                  className={`bg-gray-200 dark:bg-gray-700 rounded-full p-2 focus:outline-none ${
+                  className={`bg-gray-200 dark:bg-gray-700 rounded-full w-11 h-7 mr-2 ml-2 focus:outline-none ${
                     langMode ? "translate-x-0 bg-indigo-500" : "translate-x-0"
                   }`}
                   onClick={toggleLangMode}
@@ -143,15 +150,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
                   <div
                     className={`w-4 h-4 rounded-full transform transition-transform ${
                       langMode
-                        ? "translate-x-0 bg-red-500"
-                        : "translate-x-0 bg-blue-500"
+                        ? "translate-x-2 bg-red-500"
+                        : "translate-x-5 bg-blue-500"
                     }`}
                   />
                 </button>
+                <Image className="h-6 w-6" src={eng} alt="Logo" />
               </div>
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="btnToggle text-white-300 hover:bg-gray-700 hover:text-white px-2 py-1 rounded-md"
@@ -174,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
           </div>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <ScrollButton
                 targetId="home"
@@ -218,6 +226,25 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
                 label="Contact Us"
                 className={`${styles.button.navbarHidden}`}
               />
+              <div className="flex">
+                <Image className="h-6 w-6" src={idn} alt="Logo" />
+                <button
+                  className={`bg-gray-200 dark:bg-gray-700 rounded-full w-11 h-7 focus:outline-none mr-2 ml-2 ${
+                    langMode ? "translate-x-0 bg-indigo-500" : "translate-x-0"
+                  }`}
+                  onClick={toggleLangMode}
+                  aria-label="Toggle Dark Mode"
+                >
+                  <div
+                    className={`w-4 h-4 rounded-full transform transition-transform ${
+                      langMode
+                        ? "translate-x-2 bg-red-500"
+                        : "translate-x-5 bg-blue-500"
+                    }`}
+                  />
+                </button>
+                <Image className="h-6 w-6" src={eng} alt="Logo" />
+              </div>
             </div>
           </div>
         )}

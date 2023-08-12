@@ -1,20 +1,19 @@
 /* RunningContent.module.css */
 .runningContent {
-    overflow: hidden;
-    width: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.runningText {
+  white-space: nowrap;
+  animation: marquee 200s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
   }
-  
-  .runningText {
-    white-space: nowrap;
-    animation: marquee 200s linear infinite;
+  to {
+    transform: translateX(-1000%);
   }
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-1000%);
-    }
-  }
-  
+}
