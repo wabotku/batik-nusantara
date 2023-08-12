@@ -2,7 +2,11 @@ import React from "react";
 import { imageUrl } from "../constant";
 import Carousel from "../parts/Carousel";
 
-const Product: React.FC = () => {
+interface HomeProps {
+  langMode: boolean;
+}
+
+const Product: React.FC<HomeProps> = ({langMode}) => {
   return (
     <div className="flex justify-center items-center " id="product">
       <Carousel items={imageUrl} />

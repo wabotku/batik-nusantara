@@ -186,3 +186,126 @@ export const priceTText = [
     ],
   },
 ];
+
+export const priceEngText = [
+  {
+    id: 1,
+    head: "Regular Printed Fabric with Batik Patterns",
+    list: [
+      "Price per meter starts from Rp. 45,000,- - Rp. 70,000,-",
+      "Cotton fabric types from Prima – Primis",
+      "Production time: 3 – 5 weeks",
+    ],
+  },
+  {
+    id: 2,
+    head: "Batik Cap Fabric",
+    list: [
+      "Price per piece (2 meters) or custom order starts from Rp. 200,000,- - Rp. 300,000,-",
+      "Cotton fabric type: Primis",
+      "Production time: 1 month – 1.5 months",
+    ],
+  },
+  {
+    id: 3,
+    head: "Batik Night-Tolet Printed Fabric with Batik Patterns",
+    list: [
+      "Price per piece (2 meters) or custom order starts from Rp. 250,000,- - Rp. 350,000,-",
+      "Cotton fabric type: Primis",
+      "Production time: 1 month – 2 months",
+    ],
+  },
+  {
+    id: 4,
+    head: "Batik Tulis (Handwritten) Fabric with Cap (Stamp) Combination",
+    list: [
+      "Price per piece (2 meters) or custom order starts from Rp. 350,000,- - Rp. 500,000,-",
+      "Cotton fabric type: Primis",
+      "Production time: 1 month – 2 months",
+    ],
+  },
+  {
+    id: 5,
+    head: "Regular Handwritten Batik Fabric",
+    list: [
+      "Price per piece (2 meters) or custom order starts from Rp. 400,000,- - Rp. 600,000,-",
+      "Cotton fabric types: Santiu Super B, Primis",
+      "Production time: 1.5 months – 2 months, and can be longer depending on the quantity and complexity.",
+    ],
+  },
+  {
+    id: 6,
+    head: "Premium Handwritten Batik Fabric",
+    list: [
+      "Price per piece (2.6 x 1.15 meters) starts from Rp. 750,000,- - Rp. 2,500,000,- the highest price for Handwritten Batik",
+      "Cotton fabric type: Primis",
+      "Production time: 2 – 5 months, and can be longer depending on the quantity and complexity.",
+    ],
+  },
+  {
+    id: 7,
+    head: "Sewing Services",
+    list: [
+      "Sewing cost per outfit: Rp. 250,000,- including inner lining, buttons, or zippers.",
+    ],
+  },
+];
+
+export const priceTEngText = [
+  {
+    id: 1,
+    head: "Prima Fabric",
+    list: [
+      "Standard stitching 165,000",
+      "Good stitching 315,000",
+    ],
+  },
+  {
+    id: 2,
+    head: "Primis Fabric",
+    list: [
+      "Standard stitching 190,000",
+      "Good stitching 310,000",
+    ],
+  },
+  {
+    id: 3,
+    head: "Batik Cap Fabric - Primis Fabric",
+    list: [
+      "Standard stitching 265,000",
+      "Good stitching 360,000",
+    ],
+  },
+  {
+    id: 4,
+    head: "Semi-Handwritten Batik Fabric - Primis Fabric",
+    list: [
+      "Standard stitching 260,000",
+      "Good stitching 375,000",
+    ],
+  },
+  {
+    id: 5,
+    head: "Handwritten Batik with Cap Combination - Primis Fabric",
+    list: [
+      "Standard stitching 345,000",
+      "Good stitching 495,000",
+    ],
+  },
+  {
+    id: 6,
+    head: "Regular Handwritten Batik Fabric - Primis Fabric",
+    list: [
+      "Standard stitching 435,000",
+      "Good stitching 565,000",
+    ],
+  },
+  {
+    id: 7,
+    head: "Premium Handwritten Batik Fabric",
+    list: [
+      "Good stitching starting from 1,000,000",
+    ],
+  },
+];
+

@@ -16,11 +16,11 @@ const Home: React.FC<HomeProps> = ({ langMode }) => {
   return (
     <div className="-mb-16">
       <About langMode={langMode} />
-      <Purposes />
-      <Product />
-      <Services />
-      <Prices />
-      <Contact />
+      <Purposes langMode={langMode}/>
+      <Product langMode={langMode}/>
+      <Services langMode={langMode}/>
+      <Prices langMode={langMode}/>
+      <Contact langMode={langMode}/>
     </div>
   );
 };

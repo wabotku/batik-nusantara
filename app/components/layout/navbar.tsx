@@ -76,43 +76,43 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
               <ScrollButton
                 targetId="home"
                 offset={0}
-                label="Home"
+                label={`${langMode ? 'Beranda':'Home'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="about"
                 offset={-105}
-                label="About"
+                label={`${langMode ? 'Tentang':'About'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="purposes"
                 offset={-105}
-                label="Purposes"
+                label={`${langMode ? 'Tujuan':'Purposes'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="product"
                 offset={-105}
-                label="Product"
+                label={`${langMode ? 'Produk':'Product'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="services"
                 offset={-50}
-                label="Services"
+                label={`${langMode ? 'Layanan':'Services'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="prices"
                 offset={-50}
-                label="Prices"
+                label={`${langMode ? 'Harga':'Prices'}`}
                 className={`${styles.button.navbar}`}
               />
               <ScrollButton
                 targetId="contact"
                 offset={-50}
-                label="Contact Us"
+                label={`${langMode ? 'Kontak Kami':'Contact Us'}`}
                 className={`${styles.button.navbar}`}
               />
               {/* <div>
@@ -143,8 +143,8 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, langMode, tog
                   <div
                     className={`w-4 h-4 rounded-full transform transition-transform ${
                       langMode
-                        ? "translate-x-0 bg-white"
-                        : "translate-x-0 bg-indigo-500"
+                        ? "translate-x-0 bg-red-500"
+                        : "translate-x-0 bg-blue-500"
                     }`}
                   />
                 </button>

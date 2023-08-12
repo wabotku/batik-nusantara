@@ -41,7 +41,6 @@ const Base: React.FC<LayoutProps> = ({ children }) => {
               }}
             >
               <Home langMode={langMode} />
-              {children}
             </main>
           </div>
         </div>
