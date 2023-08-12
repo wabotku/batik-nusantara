@@ -2,11 +2,11 @@ import React from "react";
 import logo from "/public/image/logo.png";
 import Image from "next/image";
 
-const Testimoni: React.FC = () => {
+const Techniques: React.FC = () => {
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center p-12"
-      id="testimoni"
+      id="techniques"
     >
       <div className="">
         <Image className="h-40 w-36 md:h-60 md:w-56" src={logo} alt="Logo" />
@@ -31,4 +31,4 @@ const Testimoni: React.FC = () => {
   );
 };
 
-export default Testimoni;
+export default Techniques;

@@ -1,14 +1,13 @@
 import React from "react";
 import { imageUrl } from "../constant";
-import Image from "next/image";
+import Carousel from "../parts/Carousel";
 
 const Product: React.FC = () => {
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-5 gap-4 place-items-center p-12"
-      id="product"
-    >
-      {imageUrl.map((image) => (
+    <div className="flex justify-center items-center " id="product">
+      <Carousel items={imageUrl} />
+
+      {/* {imageUrl.map((image) => (
         <div key={image.id} className="h-72 w-72 md:h-72 md:w-72">
           <Image
             src={image.url}
@@ -19,7 +18,7 @@ const Product: React.FC = () => {
             className="rounded-md"
           />
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

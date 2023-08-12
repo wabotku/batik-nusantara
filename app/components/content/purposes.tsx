@@ -1,24 +1,30 @@
 import React from "react";
-// import logo from "/public/image/logo.png";
-// import Image from "next/image";
+import logo from "/public/image/raw-logo.png";
+import Image from "next/image";
 
 const Purposes: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 place-items-center p-12" id="purposes">
-      <div className="whitespace-break-spaces text-center">
-        Batik berasal dari kata ambatik yang artinya adalah sebuah kain yang
-        memiliki banyak titik. Akhiran dari kata batik yaitu tik artinya adalah
-        titik atau ujung yang digunakan untuk membuat sebuah titik. Kerajinan
-        dari batik di Indonesia telah dikenal sejak zaman kerajaan Majapahit.
-        Arca Bhairawa adalah salah satu contoh dari gaya seni Arca Majapahit
-        yang dibuat di daerah Sumatera pada sekitar abad ke 14. Berkembangnya
-        kesenian batik meluas di Indonesia setelah akhir abad ke 18 atau sekitar
-        awal ke 19. Kemudian batik cap dikenal setelah perang dunia I selesai
-        atau pada tahun 1920. Sejarah batik di Indonesia memiliki kaitan erat
-        dengan perkembangan Kerajaan Majapahit serta penyebaran ajaran agama
-        Islam di Pulau Jawa. menurut beberapa catatan, pengembangan dari batik
-        banyak dilakukan pada zaman Kesultanan Mataram dan kemudian berlanjut
-        pada zaman Kasunan Surakarta serta Kesultanan Yogyakarta.
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 place-items-center p-12"
+      id="purposes"
+    >
+      <div>
+        <Image className="h-48 w-36 md:h-60 md:w-44" src={logo} alt="Logo" />
+      </div>
+      <div className="md:ml-20 mt-8">
+        <div className="text-center font-bold">
+          <h1>VISI</h1>
+        </div>
+        <div className="text-center">
+          “Optimisme Masa Depan Cerah Untuk Batik Nusantara Dalam Melestarikan
+          Busana Ciri Khas Indonesia Hingga Dikenal di seluruh Dunia.”
+        </div>
+        <div className="text-center mt-8 font-bold">MISI</div>
+        <div className="text-center">
+          Batik Nusantara Akan Terus Berkembang Mewujudkan Pelestarian Batik
+          Sebagai Busana Tradisional Bangsa Indonesia Di Mata Dunia Melalui
+          Sosial Media
+        </div>
       </div>
     </div>
   );

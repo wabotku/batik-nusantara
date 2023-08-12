@@ -1,31 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "/public/image/logo.png";
 import Image from "next/image";
 
-const About: React.FC = () => {
+interface HomeProps {
+  langMode: boolean;
+}
+
+const About: React.FC<HomeProps> = ({ langMode }) => {
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center p-12"
-      id="about"
-    >
+    <div className="grid grid-cols-1 gap-14 place-items-center p-7" id="about">
       <div className="">
-        <Image className="h-40 w-36 md:h-60 md:w-56" src={logo} alt="Logo" />
+        <Image className="h-40 w-40 md:h-60 md:w-60" src={logo} alt="Logo" />
       </div>
-      <div className="whitespace-break-spaces text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro excepturi
-        sapiente officiis voluptatibus quam rem, eos omnis consequatur harum, id
-        voluptatum neque aliquid ea autem obcaecati ab doloribus assumenda
-        tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Recusandae, nisi mollitia doloribus nesciunt consequuntur voluptate,
-        corporis alias delectus in incidunt sapiente dolor ut rem excepturi
-        sequi doloremque voluptatibus corrupti error! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Distinctio facilis reiciendis ipsum quidem
-        facere? Quidem at quod blanditiis quasi, similique sint nihil ea,
-        aspernatur quas a quo enim molestiae necessitatibus? Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Delectus, laborum beatae?
-        Laudantium laboriosam enim reprehenderit totam debitis porro dolorem
-        error aut provident ea hic rem, fuga, architecto officia doloribus
-        corporis.
+      <div className="whitespace-break-spaces text-center md:ml-20 md:mr-20">
+        {`${
+          langMode
+            ? `Batik Nusantara adalah usaha yang bergerak dalam bidang fashion terutama dalam penyediaan bahan batik, tenun dan butik, baik dalam skala kecil maupun dalam partai besar. Batik Nusantara telah ada sejak tahun 1986, semula hanya menerima pesanan seragam batik untuk kader UPGK di Posyandu di Klaten Jawa Tengah tahun 1986, hingga berkembang sampai dengan saat ini.`
+            : `"Batik Nusantara" is a business engaged in the fashion industry, primarily focusing on providing batik and woven fabric materials as well as operating a boutique, catering to both small-scale and large-scale needs. "Batik Nusantara" has been established since 1986. It initially started by fulfilling orders for batik uniforms for UPGK cadres at Posyandu in Klaten, Central Java, in 1986. Over time, it has evolved and grown to its current state.`
+        }`}
       </div>
     </div>
   );

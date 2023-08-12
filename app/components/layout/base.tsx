@@ -2,6 +2,7 @@
 import React, { ReactNode, useState } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Home from "../pages";
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,14 +10,18 @@ interface LayoutProps {
 
 const Base: React.FC<LayoutProps> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
+  const [langMode, setLangMode] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
+  const toggleLangMode = () => {
+    setLangMode((prevMode) => !prevMode);
+  };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <div className="flex flex-col min-h-screen" id="home">
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} langMode={langMode} toggleLangMode={toggleLangMode} />
       <div
         className={`bg-cover bg-center bg-no-repeat`}
         style={{
@@ -35,6 +40,7 @@ const Base: React.FC<LayoutProps> = ({ children }) => {
                 backgroundImage: `url('/image/background-opa.png')`,
               }}
             >
+              <Home langMode={langMode} />
               {children}
             </main>
           </div>

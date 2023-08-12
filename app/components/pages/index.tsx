@@ -1,14 +1,25 @@
 import React from "react";
-import {About, Advantages, Contact, Product, Purposes, Testimoni} from "../content";
+import {
+  About,
+  Services,
+  Contact,
+  Product,
+  Purposes,
+  Prices,
+} from "../content";
 
-const Home: React.FC = () => {
+interface HomeProps {
+  langMode: boolean;
+}
+
+const Home: React.FC<HomeProps> = ({ langMode }) => {
   return (
     <div className="-mb-16">
-      <About />
+      <About langMode={langMode} />
       <Purposes />
       <Product />
-      <Advantages />
-      <Testimoni />
+      <Services />
+      <Prices />
       <Contact />
     </div>
   );
