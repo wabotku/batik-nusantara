@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import logo from "/public/image/banus-trans-white.png";
-import idn from "/public/image/Indonesia.png";
+import idn from "/public/image/indonesia.png";
 import eng from "/public/image/english.png";
 import Image from "next/image";
 import styles from "../styles";
