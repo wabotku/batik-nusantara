@@ -31,7 +31,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             </div>
             <div>
               We also offer tailoring services for batik uniforms for both men
-              and women. With the best quality, there's no need to search for
+              and women. With the best quality, there is no need to search for
               tailors elsewhere.
             </div>
           </div>

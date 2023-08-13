@@ -8,7 +8,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Base: React.FC<LayoutProps> = ({ children }) => {
+const Base: React.FC = (props:any) => {
   const [darkMode, setDarkMode] = useState(false);
   const [langMode, setLangMode] = useState(true);
 

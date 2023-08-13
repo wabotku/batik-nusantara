@@ -16,8 +16,8 @@ const priceList: React.FC<priceListProps> = ({ items, opt }) => {
             <h1>{item.head}</h1>
           </div>
           <div className="text-lg mb-10 lg:mr-48 lg:ml-48">
-            {item.list.map((subitem) => (
-              <h2>{subitem}</h2>
+            {item.list.map((subitem, index) => (
+              <h2 key={index}>{subitem}</h2>
             ))}
           </div>
         </>

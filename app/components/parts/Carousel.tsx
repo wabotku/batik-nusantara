@@ -1,5 +1,4 @@
-// CustomCarousel.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,14 +9,32 @@ interface CustomCarouselProps {
 }
 
 const CustomCarousel: React.FC<CustomCarouselProps> = ({ items }) => {
-  var isMobileView = window.innerWidth <= 768 ? 100 : 33.33;
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+
+    // Initial check
+    checkIsMobile();
+
+    // Attach an event listener to update isMobileView on window resize
+    window.addEventListener("resize", checkIsMobile);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
   return (
     <Carousel
       showStatus={false}
       showThumbs={false}
       infiniteLoop={true}
       centerMode={true}
-      centerSlidePercentage={isMobileView}
+      centerSlidePercentage={isMobileView ? 100 : 33.33}
       autoPlay={true}
       interval={3000}
     >
