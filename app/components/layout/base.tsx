@@ -30,12 +30,12 @@ const Base: React.FC = (props:any) => {
         }}
       />
       <div className="flex-1">
-        <div className="mx-auto">
+        <div className="mx-auto ">
           <div className="flex bg-cover">
             <main
               className={`flex-1 ${
                 darkMode ? "bg-neutral-900 text-white" : "bg-white text-black"
-              } p-6`}
+              } p-6 lg:pr-52 lg:pl-52 md:p-6 md:pr-6 md:pl-6`}
               style={{
                 backgroundImage: `url('/image/background-opa.png')`,
               }}

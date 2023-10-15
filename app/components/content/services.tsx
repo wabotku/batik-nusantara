@@ -14,7 +14,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Services</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 text-justify pt-16 lg:pl-16 lg:pr-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pt-16 lg:pl-16 lg:pr-16">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Production of Batik Uniform Fabric</h1>
@@ -60,9 +60,9 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Basic Materials</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-justify pt-16 pl-16 pr-16">
-          <div className="">
-            <div className=" font-bold">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-16 pl-16 pr-16">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Poplin Fabric</h1>
             </div>
             <div>
@@ -75,8 +75,8 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               </ul>
             </div>
           </div>
-          <div className="">
-            <div className=" font-bold">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Prima Fabric</h1>
             </div>
             <div>
@@ -89,8 +89,8 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               </ul>
             </div>
           </div>
-          <div className="">
-            <div className=" font-bold">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Primis Fabric</h1>
             </div>
             <div>
@@ -116,7 +116,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Layanan</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-justify pt-16 md:pl-16 md:pr-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-16 md:pl-16 md:pr-16">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Produksi Kain Seragam Batik</h1>
@@ -162,9 +162,9 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             <h1>Bahan Dasar</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-justify pt-16 pl-16 pr-16">
-          <div className="">
-            <div className=" font-bold">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-16 pl-16 pr-16">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Bahan Poplin</h1>
             </div>
             <div>
@@ -177,8 +177,8 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               </ul>
             </div>
           </div>
-          <div className="">
-            <div className=" font-bold">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Bahan Prima</h1>
             </div>
             <div>
@@ -191,8 +191,8 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               </ul>
             </div>
           </div>
-          <div className="">
-            <div className=" font-bold">
+          <div className="m-auto">
+            <div className="font-bold text-center mb-3">
               <h1>Bahan Primis</h1>
             </div>
             <div>

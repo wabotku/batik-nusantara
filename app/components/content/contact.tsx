@@ -317,8 +317,11 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
       <div className="">
         <Image className="h-40 w-40 lg:h-60 lg:w-60" src={logo} alt="Logo" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-12" id="contact">
-        <div className="text-center -ml-20 -mr-20 md:m-0">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-12"
+        id="contact"
+      >
+        <div className="text-center md:-ml-20 md:-mr-20 -ml-12 -mr-12 md:m-0">
           <div className="font-bold">
             <h1>{langMode ? `Alamat Showroom` : `Showroom Address`} :</h1>
           </div>
@@ -365,44 +368,54 @@ const Contact: React.FC<HomeProps> = ({ langMode }) => {
             Surabaya, Jawa Timur 60189
           </div>
         </div>
-        <div className="text-center">
-          <div className="font-bold mb-4">
+        <div className="text-center md:m-0 -mr-12 -ml-12">
+          <div className="font-bold mb-4  ">
             <h1>{langMode ? `Media Social` : `Social Media`} :</h1>
           </div>
           <Link
             href="https://peken.surabaya.go.id/store/info/38"
-            className="font-bold mb-5 flex -ml-16 md:ml-24 md:mr-24 place-items-center hover:underline"
+            className="font-bold mb-5 md:flex md:ml-12 md:mr-12 place-items-center hover:underline"
             target="_blank"
           >
-            Webstore : https://peken.surabaya.go.id/store/info/38
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
+              {/* Webstore : <br /> https://peken.surabaya.go.id/store/info/38 */}
+            </div>
           </Link>
           <Link
             href="https://www.instagram.com/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 md:flex md:ml-12 md:mr-12 place-items-center hover:underline"
             target="_blank"
           >
-            <Image className="h-10 w-10 mr-5" src={instagram} alt="Logo" />
-            @nadeenbybatiknusantara
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:mb-0 md:gap-0 mb-4 gap-2">
+              <Image className="h-10 w-10 " src={instagram} alt="Logo" />
+              @nadeenbybatiknusantara
+            </div>
           </Link>
           <Link
             href="https://shopee.co.id/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 md:flex md:ml-12 md:mr-12 place-items-center hover:underline"
             target="_blank"
           >
-            <Image className="h-10 w-10 mr-5" src={shopee} alt="Logo" />
-            nadeenbybatiknusantara
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:mb-0 md:gap-0 mb-4 gap-2">
+              <Image className="h-10 w-10" src={shopee} alt="Logo" />
+              nadeenbybatiknusantara
+            </div>
           </Link>
           <Link
             href="https://www.tokopedia.com/nadeenbybatiknusantara"
-            className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center hover:underline"
+            className="font-bold mb-5 md:flex md:ml-12 md:mr-12 place-items-center hover:underline"
             target="_blank"
           >
-            <Image className="h-10 w-10 mr-5" src={tokopedia} alt="Logo" />
-            nadeenbybatiknusantara
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:mb-0 md:gap-0 mb-4 gap-2">
+              <Image className="h-10 w-10 " src={tokopedia} alt="Logo" />
+              nadeenbybatiknusantara
+            </div>
           </Link>
-          <div className="font-bold mb-5 flex -ml-16 md:ml-32 md:mr-32 place-items-center">
-            <Image className="h-10 w-10 mr-5" src={whatsapp} alt="Logo" />
-            08156653189 / 081331066535
+          <div className="font-bold mb-5 md:flex md:ml-12 md:mr-12 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:mb-0 md:gap-0 mb-4 gap-2">
+              <Image className="h-10 w-10 " src={whatsapp} alt="Logo" />
+              08156653189 / 081331066535
+            </div>
           </div>
         </div>
       </div>

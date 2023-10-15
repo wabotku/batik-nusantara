@@ -115,7 +115,7 @@ export const priceText = [
     id: 6,
     head: "KAIN BATIK TULIS PREMIUM",
     list: [
-      "Harga kain per potong ( 2, 6 x 1, 15 M ) dari mulai Rp. 750.000,-- Rp. 1.200.000,-- 1,500.000, - 2.500.000 sd harga tertinggi Batik Tulis",
+      "Harga kain per potong ( 2, 6 x 1, 15 M ) dari mulai Rp. 750.000,- sd harga tertinggi Batik Tulis",
       "Jenis Kain Katun Primis",
       "Waktu pembuatannya : 2 – 5 bulan, dan bisa lebih tergantung dari jumlah dan tingkat kerumitan",
     ],

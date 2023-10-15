@@ -11,7 +11,7 @@ const priceList: React.FC<priceListProps> = ({ items, opt }) => {
   return (
     <div className={`grid grid-cols-1 pt-6 lg:pl-16 lg:pr-16 ${opt}`}>
       {items.map((item) => (
-        <>
+        <div className="">
           <div className="font-bold text-center mb-5">
             <h1>{item.head}</h1>
           </div>
@@ -20,7 +20,7 @@ const priceList: React.FC<priceListProps> = ({ items, opt }) => {
               <h2 key={index}>{subitem}</h2>
             ))}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );

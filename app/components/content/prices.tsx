@@ -1,6 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { priceTText, priceText, priceImageUrl, priceEngText, priceTEngText } from "../constant";
+import {
+  priceTText,
+  priceText,
+  priceImageUrl,
+  priceEngText,
+  priceTEngText,
+} from "../constant";
 import Prices from "../parts/Prices";
 
 interface HomeProps {
@@ -17,12 +23,10 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
           </div>
         </div>
         <div className="grid grid-cols-1 pt-16 md:pl-16 md:pr-16">
-          <div className="">
-            <h1>
-              The cost of creating custom batik uniforms is influenced by
-              several factors as follows:
-            </h1>
-          </div>
+          <h1>
+            The cost of creating custom batik uniforms is influenced by several
+            factors as follows:
+          </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 md:pl-16 md:pr-16 place-items-center">
           <div className="">
@@ -35,7 +39,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               affects the price per piece of batik uniform.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[0].imageUrl}
               alt={`Image ${priceImageUrl[0].id}`}
@@ -55,7 +59,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               cost.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[1].imageUrl}
               alt={`Image ${priceImageUrl[1].id}`}
@@ -74,7 +78,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               The more orders, the lower the price.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[2].imageUrl}
               alt={`Image ${priceImageUrl[2].id}`}
@@ -94,7 +98,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               and is sufficient for a short-sleeved XL-sized shirt/blouse.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[3].imageUrl}
               alt={`Image ${priceImageUrl[3].id}`}
@@ -113,7 +117,10 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
           <div className="font-bold text-2xl text-center">
             <h1>TECHNIQUE TYPE</h1>
           </div>
-          <Prices items={langMode ? priceTText : priceTEngText} opt="place-items-center"/>
+          <Prices
+            items={langMode ? priceTText : priceTEngText}
+            opt="place-items-center"
+          />
         </div>
       </>
     );
@@ -128,14 +135,12 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
           </div>
         </div>
         <div className="grid grid-cols-1 pt-16 md:pl-16 md:pr-16">
-          <div className="">
-            <h1>
-              Biaya pembuatan seragam batik dipengaruhi oleh beberapa hal
-              sebagai berikut :
-            </h1>
-          </div>
+          <h1>
+            Biaya pembuatan seragam batik dipengaruhi oleh beberapa hal sebagai
+            berikut :
+          </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 md:pl-16 md:pr-16 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-justify pt-16 md:pl-16 md:pr-16 place-items-center ">
           <div className="">
             <div className="text-center font-bold mb-3">
               <h1>Jenis Bahan Yang Digunakan</h1>
@@ -146,7 +151,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               sehingga mempengaruhi harga seragam batik per pcs nya.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[0].imageUrl}
               alt={`Image ${priceImageUrl[0].id}`}
@@ -166,7 +171,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               banyak warna yang digunakan maka semakin tinggi biayanya.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[1].imageUrl}
               alt={`Image ${priceImageUrl[1].id}`}
@@ -185,7 +190,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               banyak jumlah pesanan maka harga akan semakin murah.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[2].imageUrl}
               alt={`Image ${priceImageUrl[2].id}`}
@@ -205,7 +210,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
               untuk kemeja/blus lengan pendek ukuran XL.
             </div>
           </div>
-          <div className="w-60 h-60">
+          <div className="md:w-80 md:h-60">
             <Image
               src={priceImageUrl[3].imageUrl}
               alt={`Image ${priceImageUrl[3].id}`}
@@ -216,7 +221,7 @@ const Services: React.FC<HomeProps> = ({ langMode }) => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1">
+        <div className="grid grid-cols-1 pt-16">
           <div className="font-bold text-2xl text-center">
             <h1>HARGA PEMESANAN BATIK</h1>
           </div>
